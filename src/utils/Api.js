@@ -35,7 +35,7 @@ setUserAvatar(data) {
         method: 'PATCH',
         headers: this._headers,
         body: JSON.stringify({
-            avatar: data
+            avatar: data.avatar
         })
     }).then(this._handleResponse).catch(err => {
         return Promise.reject(err);

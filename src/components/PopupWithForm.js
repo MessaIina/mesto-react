@@ -1,22 +1,30 @@
 import React from 'react';
 
-function PopupWithForm({ title, name, children, isOpen, onClose, buttonText, disabled}) {
+function PopupWithForm({ title, name, children, isOpen, onClose, buttonText, disabled, onSubmit, containerType }) {
 
-    return (
-     
-      <div className={`popup ${name}-popup ${isOpen && 'popup_opened'}`}  >
-        <div className="popup__container">
-          <button type="button" className="popup__close-btn" onClick={onClose}></button>
-          <form className="form" name={name}>
-            <h2 className="form__heading">{title}</h2>
-            <div className="form__input-container">
-              {children} 
-            </div>          
-            <button className={`form__submit-btn ${disabled}`} type="submit">{buttonText}</button>           
-          </form>
-        </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onSubmit();
+  };
+
+  return (
+    <div className={`popup ${name}-popup ${isOpen && 'popup_opened'}`}>
+      <div className={`popup__container ${containerType}`}>
+        <button
+          type="button"
+          className="popup__close-btn"
+          onClick={onClose}
+        ></button>
+        <form className="form" name={name} onSubmit={handleSubmit}>
+          <h2 className="form__heading">{title}</h2>
+          <div className="form__input-container">
+            {children}
+          </div>
+          <button className={`form__submit-btn ${disabled}`} type="submit">{buttonText}</button>
+        </form>
       </div>
-    );
-  }
-  
-  export default PopupWithForm;
+    </div>
+  );
+}
+
+export default PopupWithForm;
