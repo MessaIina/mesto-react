@@ -54,7 +54,10 @@ function AddPlacePopup({ isOpen, onClose, onUpdateImage }) {
           maxLength={30}
           value={name}
         />
-        <span className="form__item-error form__item-type-place-error" id="place-error"></span>
+        <span
+          className="form__item-error form__item-type-place-error"
+          id="place-error"
+        ></span>
 
         <input
           onChange={handleChangeLink}
@@ -66,7 +69,10 @@ function AddPlacePopup({ isOpen, onClose, onUpdateImage }) {
           required
           value={link}
         />
-        <span className="form__item-error form__item-link-error" id="link-error"></span>
+        <span
+          className="form__item-error form__item-link-error"
+          id="link-error"
+        ></span>
       </fieldset>
     </PopupWithForm>
   );

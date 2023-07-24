@@ -10,8 +10,7 @@ function DeleteCardPopup({ isOpen, onClose, onDelete }) {
       onClose={onClose}
       buttonText={"Да"}
       containerType={"form_delete"}
-    >
-    </PopupWithForm>
+    ></PopupWithForm>
   );
 }
 

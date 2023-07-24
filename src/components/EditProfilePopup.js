@@ -36,30 +36,34 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
       onClose={onClose}
       buttonText={"Сохранить"}
     >
-
-        <input 
-          className="form__item form__item-type-name" 
-          id="name" 
-          name="name" 
-          type="text" 
-          placeholder="Имя" 
-          required
-          value={name || ""}
-          onChange={handleChangeName}
-        />
-        <span className="form__item-error form__item-type-name-error" id="name-error"></span>
-        <input 
-          className="form__item form__item-type-job" 
-          id="about" 
-          name="about" 
-          type="text" 
-          placeholder="О себе" 
-          required
-          value={description || ""}
-          onChange={handleChangeDescription}
-        />
-        <span className="form__item-error form__item-type-job-error" id="about-error"></span>
-
+      <input
+        className="form__item form__item-type-name"
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Имя"
+        required
+        value={name || ""}
+        onChange={handleChangeName}
+      />
+      <span
+        className="form__item-error form__item-type-name-error"
+        id="name-error"
+      ></span>
+      <input
+        className="form__item form__item-type-job"
+        id="about"
+        name="about"
+        type="text"
+        placeholder="О себе"
+        required
+        value={description || ""}
+        onChange={handleChangeDescription}
+      />
+      <span
+        className="form__item-error form__item-type-job-error"
+        id="about-error"
+      ></span>
     </PopupWithForm>
   );
 }

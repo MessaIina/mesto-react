@@ -1,14 +1,14 @@
 .profile {
-	color: #fff;
-	align-items: center;
-	margin-top: 40px;
-	display: flex;
-	flex-flow: row wrap;
+  color: #fff;
+  align-items: center;
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 @media screen and (max-width: 930px) {
-	.profile {
-		flex-direction: column;
-		margin-top: 42px;
-	}
+  .profile {
+    flex-direction: column;
+    margin-top: 42px;
+  }
 }

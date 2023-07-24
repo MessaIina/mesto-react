@@ -1,14 +1,14 @@
 .container {
-	box-sizing: border-box;
-	max-width: 880px;
-	margin: 0 auto;
-	width: 100%;
-	flex: 1;
+  box-sizing: border-box;
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
 }
 
 @media screen and (max-width: 920px) {
-	.container {
-		padding-left: 19px;
-		padding-right: 19px;
-	}
+  .container {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
 }

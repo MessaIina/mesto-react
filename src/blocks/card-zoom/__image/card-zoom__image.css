@@ -1,6 +1,6 @@
 .card-zoom__image {
-	display: block;
-	object-fit: cover;
-	max-height: 75vh;
-	max-width: 75vw;
+  display: block;
+  object-fit: cover;
+  max-height: 75vh;
+  max-width: 75vw;
 }

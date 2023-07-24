@@ -1,17 +1,17 @@
 .profile__info {
-	box-sizing: border-box;
-	padding: 0 30px;
-	display: flex;
-	flex-direction: column;
-	gap: 7px;
-	max-width: 600px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: 600px;
 }
 
 @media screen and (max-width: 930px) {
-	.profile__info {
-		max-width: 282px;
-		padding: 0;
-		align-items: center;
-		margin-bottom: 33px;
-	}
+  .profile__info {
+    max-width: 282px;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 33px;
+  }
 }

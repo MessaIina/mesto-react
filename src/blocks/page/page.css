@@ -1,9 +1,9 @@
 .page {
-    display: flex;
-    flex-direction: column;
-    background-color: #000;
-    min-width: 320px;
-    min-height: 100vh;
-    margin: auto;
-    font-family: 'Inter', 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: auto;
+  font-family: "Inter", "Arial", sans-serif;
 }

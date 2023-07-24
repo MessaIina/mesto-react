@@ -36,26 +36,27 @@ function Card({
   return (
     <li className="card">
       {isOwn && (
-        <button 
-        type="button" 
-        className="card__delete-btn" 
-        onClick={handleDeleteClick} />
+        <button
+          type="button"
+          className="card__delete-btn"
+          onClick={handleDeleteClick}
+        />
       )}
-      <img 
-      className="card__image" 
-      onClick={handleClick} 
-      src={link}
-      alt={name}
+      <img
+        className="card__image"
+        onClick={handleClick}
+        src={link}
+        alt={name}
       />
       <div className="card__caption">
         <h2 className="card__name">{name}</h2>
         <div className="card__likes-container">
-          <button 
-          type="button" 
-          className={cardLikeButtonClassName}
+          <button
+            type="button"
+            className={cardLikeButtonClassName}
             onClick={handleLikeClick}
-            ></button>
-            <span className="card__like-counter">{likes.length}</span>
+          ></button>
+          <span className="card__like-counter">{likes.length}</span>
         </div>
       </div>
     </li>

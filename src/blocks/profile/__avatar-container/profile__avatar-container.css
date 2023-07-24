@@ -1,16 +1,16 @@
 .profile__avatar-container {
-    border-radius: 50%;
-    height: 120px;
-    overflow: hidden;
-    position: relative;
-    width: 120px;
+  border-radius: 50%;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  width: 120px;
 }
 
 .profile__container-avatar:before {
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
