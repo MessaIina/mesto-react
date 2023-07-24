@@ -30,7 +30,7 @@ function App() {
         console.log(err);
       });
   }, []);
-
+  
   function handleCardDelete() {
     api
       .deleteCard(selectedCard._id)
@@ -38,72 +38,67 @@ function App() {
         const filteredCards = cards.filter((item) => {
           return selectedCard._id !== item._id;
         });
-
+  
         setCards(filteredCards);
+        closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        closeAllPopups();
       });
   }
-
+  
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     if (isLiked) {
-      api.dislikeCard(card._id).then((newCard) => {
-        setCards((state) =>
-          state.map((c) => (c._id === card._id ? newCard : c))
-        );
-      });
+      api.dislikeCard(card._id)
+        .then((newCard) => {
+          setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
-      api.likeCard(card._id).then((newCard) => {
-        setCards((state) =>
-          state.map((c) => (c._id === card._id ? newCard : c))
-        );
-      });
+      api.likeCard(card._id)
+        .then((newCard) => {
+          setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
+          closeAllPopups();
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }
-
+  
   function handleUpdateAvatar(obj) {
     api.setUserAvatar(obj)
       .then((result) => {
         setCurrentUser(result);
+        closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        closeAllPopups();
       });
   }
-
+  
   function handleUpdateUser(obj) {
-    api
-      .setUserInfo(obj)
+    api.setUserInfo(obj)
       .then((result) => {
         setCurrentUser(result);
+        closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        closeAllPopups();
       });
   }
-
+  
   function handleAddImage(obj) {
-    api
-      .createCard(obj)
+    api.createCard(obj)
       .then((newCard) => {
         setCards([newCard, ...cards]);
+        closeAllPopups();
       })
       .catch((err) => {
         console.log(err);
-      })
-      .finally(() => {
-        closeAllPopups();
       });
   }
 
